@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Template.Scripts;
 
 namespace Template
 {
@@ -29,6 +30,9 @@ namespace Template
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            graphics.PreferredBackBufferHeight = 400;
+            graphics.PreferredBackBufferWidth = 1600;
+            graphics.ApplyChanges();
         }
 
         /// <summary>
@@ -39,6 +43,7 @@ namespace Template
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
 
             // TODO: use this.Content to load your game content here 
         }
@@ -73,10 +78,10 @@ namespace Template
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.White);
 
             // TODO: Add your drawing code here.
-
+            
             base.Draw(gameTime);
         }
     }
